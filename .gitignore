@@ -1,0 +1,9 @@
+# for DB
+.env
+
+#for npm
+node_modules/
+package-lock.json
+
+# for Mac
+.DS_Store
