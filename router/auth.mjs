@@ -3,11 +3,16 @@ import * as auth_controller from "../controller/auth_controller.mjs";
 
 const router = express.Router();
 
+
 //log_in
 router.post("/log_in", auth_controller.log_in);
 //maintain log_in
 
 //sign_up
 router.post("/sign_up", auth_controller.sign_up);
+
+router.get("/me", auth_controller.me);
+
+router.get("/log_out", auth_controller.log_out);
 
 export default router;

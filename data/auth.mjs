@@ -41,8 +41,6 @@ let users = [
     }
 ]
 
-// 회원가입
-
 // 로그인
 export async function log_in(input_id, input_pw) {
     if (!input_id || !input_pw) {
@@ -56,6 +54,8 @@ export async function log_in(input_id, input_pw) {
         return null;
     }
 }
+
+// 회원가입
 export async function sign_up(input_id, input_pw, name, email) {
     if (!input_id || !input_pw || !name || !email) {
         console.log("아이디, 비밀번호, 이름, 이메일을 입력해주세요.");
