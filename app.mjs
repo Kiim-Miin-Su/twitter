@@ -6,9 +6,8 @@ import auth_router from "./router/auth.mjs";
 const app = express();
 const port = 8080;
 
-__dirname = path.resolve();
-
 app.use(express.json());
+
 app.use("/posts", posts_router);
 app.use("/auth", auth_router);
 
