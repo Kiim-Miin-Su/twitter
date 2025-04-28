@@ -1,10 +1,15 @@
 import express from "express";
-import session from "express-session";
 import * as auth_repository from "../data/auth.mjs";
+import session from "express-session";
 
 const app = express();
 app.use(express.json());
 app.use(session({ secret: "!tc4079tc@", resave: false, saveUninitialized: false, cookie: { secure: false } }));
+
+export async function send_logIn(req, res, next) {
+    res.render("log_in");
+    return res.status(200);
+}
 
 export async function log_in(req, res, next) {
     const { input_id, input_pw } = req.body;

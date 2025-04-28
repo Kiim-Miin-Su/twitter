@@ -9,16 +9,6 @@ const app = express();
 const port = 8080;
 
 app.use(express.json());
-app.use(session({
-    secret: "!tc4079tc@",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        secure: false, // 개발 환경에서는 false
-        httpOnly: true,
-    },
-}));
-
 app.use("/posts", posts_router);
 app.use("/auth", auth_router);
 
